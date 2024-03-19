@@ -37,6 +37,10 @@ List the ready features here:
 - Dapat menampilkan hasil generasi pada titik koordinat
 - Dapat membuat animasi pembentukan Kurva per iterasi
 
+## Screenshots
+![]
+
+
 ## Setup
 
 Pastikan perangkat sudah terinstall python versi 3.5 ke atas
