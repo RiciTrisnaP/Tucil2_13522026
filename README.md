@@ -1,9 +1,14 @@
 # Membangun Kurva Bézier dengan Algoritma Titik Tengah berbasis Divide and Conquer
 > Tugas Kecil 2 IF2211 Strategi Algoritma
+> 
 > Semester II tahun 2023/2024
+> 
 > NIM : 13522026
+> 
 > Nama : Rici Trisna Putra
+> 
 > Kelas : K02
+> 
 
 ## Table of Contents
 * [General Info](#general-information)
