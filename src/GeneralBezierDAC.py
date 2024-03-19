@@ -3,7 +3,7 @@ from Visulization import Animation, Draw
 
 def GeneralBezierDAC(initial_point_list, cur_iteration, iteration):
     # Mengenerasi subpoint dan titik estimasi kemudian membagi masalah menjadi dua
-    left_initial_point, right_initial_point = MidPointAlgorithm(initial_point_list)
+    left_initial_point, right_initial_point = Subdivide(initial_point_list)
 
     left_initial_point.insert(0,initial_point_list[0]) ## Menambahkan titik handle kurva paling ujung kiri
     right_initial_point.extend([initial_point_list[-1]]) ## Menambahkan titik handle kurva ujung kanan
@@ -19,7 +19,7 @@ def GeneralBezierDAC(initial_point_list, cur_iteration, iteration):
     result = [left_initial_point[0], left_initial_point[-1],right_initial_point[-1]]
     return result
 
-def MidPointAlgorithm(initial_point_list):
+def Subdivide(initial_point_list):
 
     subPointList = [] ## List yang menampung semua subpoint yang digenerasi
     for i in range(0,len(initial_point_list)-1): ## Mengenerasi subpoint
@@ -31,7 +31,7 @@ def MidPointAlgorithm(initial_point_list):
         return subPointList, subPointList.copy()
 
     subPointListCopy = subPointList ## Membuat salinan Subpointlist untuk selanjutnya di cari subpoint untuk titik-titik pada list tersebut
-    left, right = MidPointAlgorithm(subPointListCopy)
+    left, right = Subdivide(subPointListCopy)
     left.insert(0,subPointList[0])
     right.append(subPointList[-1])
 
