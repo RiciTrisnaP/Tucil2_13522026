@@ -11,12 +11,12 @@ def GeneralBezierBF(initial_point_list,iteration):
     ## Membuat list penampung titik yang tergenerasi
     result = [initial_point_list[0]] ## Menambahkan titik awal ke dalam list result
     for i in listOfTValue:
-        temp = lerpAllTheWay(initial_point_list,i) ## Melakukan linear interpolasi pada tiap nilai t
+        temp = Casteljau(initial_point_list,i) ## Melakukan linear interpolasi pada tiap nilai t
         result.append(temp)
 
     return result
  
-def lerpAllTheWay(initial_point_list,t): ## De Casteljau's Algorithm
+def Casteljau(initial_point_list,t): ## De Casteljau's Algorithm
 
     if len(initial_point_list) == 1: ## Apabila telah didapat satu titik estimasi
         return initial_point_list[0]
@@ -27,7 +27,7 @@ def lerpAllTheWay(initial_point_list,t): ## De Casteljau's Algorithm
         subPoint = lerp(Point1,Point2,t)
         subPointList.append(subPoint)
     
-    result = lerpAllTheWay(subPointList,t) ## Melakukan linear interpolation pada subpoint list hingga didapat satu titik
+    result = Casteljau(subPointList,t) ## Melakukan linear interpolation pada subpoint list hingga didapat satu titik
     return result
 
 def lerp(Point1,Point2,t): ## Linear interpolation
