@@ -41,7 +41,7 @@ def main():
     iteration = int(input("Masukkan jumlah iterasi: "))
 
     ## input titik
-    for i in range(1,4):
+    for i in range(1,n+2):
         x,y = [int(i) for i in input(f"Masukkan titik ke {i}: ").split(" ")]
         initial_point_list.append((x,y))
 
