@@ -38,7 +38,9 @@ List the ready features here:
 - Dapat membuat animasi pembentukan Kurva per iterasi
 
 ## Screenshots
-![]
+![screenshot1](./test/Figure_1.png)
+![screenshot2](./test/Figure_7.png)
+![screenshot2](./test/Figure_9.png)
 
 
 ## Setup
